@@ -72,7 +72,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying to Tomcat...'
-                sh 'sudo mv /var/lib/jenkins/workspace/addressbookproject-automated/target/addressbook.war /home/ubuntu/apache-tomcat-9.0.115/webapps'
+                sh 'sudo mv /var/lib/jenkins/workspace/addressbook-cicd/target/addressbook.war /home/ubuntu/apache-tomcat-9.0.115/webapps'
             }
         }
 
