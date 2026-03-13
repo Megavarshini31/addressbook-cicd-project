@@ -77,18 +77,4 @@ pipeline {
         }
 
     }
-
-    post {
-        success {
-            mail to: 'team@example.com',
-                 subject: "SUCCESS: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-                 body: "Build passed! Check it here: ${env.BUILD_URL}"
-        }
-        failure {
-            mail to: 'team@example.com',
-                 subject: "FAILED: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-                 body: "Build failed! Check logs here: ${env.BUILD_URL}"
-        }
-    }
-
 }
